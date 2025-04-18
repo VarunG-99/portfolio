@@ -15,8 +15,12 @@
 </head>
 <body>
     <header>
-        <h1>Varun Gowda</h1>
-        <h2>ENTC Engineer</h2>
+        <h1>
+            <span>V</span><span>a</span><span>r</span><span>u</span><span>n</span> <span>G</span><span>o</span><span>w</span><span>d</span><span>a</span>
+        </h1>
+        <h2>
+            <span>E</span><span>N</span><span>T</span><span>C</span> <span>E</span><span>n</span><span>g</span><span>i</span><span>n</span><span>e</span><span>e</span><span>r</span>
+        </h2>
         <nav aria-label="Main navigation">
             <ul>
                 <li><a href="#dashboard">Dashboard</a></li>
@@ -27,7 +31,6 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        
     </header>    
 
     <div class="floating-icons">
@@ -158,7 +161,7 @@
               <li><a href="file:///C:/Users/admin/Downloads/Python%20Essentials%201%20Certificate.pdf" target="_blank">Python Essentials 1 – Cisco</a></li>
               <li><a href="file:///C:/Users/admin/Downloads/Python%20Essentials%202%20Certificate.pdf" target="_blank">Python Essentials 2 – Cisco</a></li>
               <li><a href="file:///C:/Users/admin/Downloads/be10x%20Power%20BI%20Certificate.pdf" target="_blank">Power BI – Be 10x</a></li>
-              <li><a href="file:///C:/Users/admin/Downloads/be10x%20AI%20Certificate.pdf" target="_blank">Multipe AI Tools – Be 10x</a></li>
+              <li><a href="file:///C:/Users/admin/Downloads/be10x%20AI%20Certificate.pdf" target="_blank">Multiple AI Tools – Be 10x</a></li>
             </ul>
           </div>
       
@@ -197,6 +200,27 @@
         </form>
     </section>
 
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">
+        <img src="chevron-double-up_10697604.png" alt="Scroll to top" />
+    </button>
+
+    <script>
+      // Show button when scrolling down
+      window.onscroll = function () {
+        const btn = document.getElementById("scrollTopBtn");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          btn.style.display = "block";
+        } else {
+          btn.style.display = "none";
+        }
+      };
+    
+      // Scroll to top on click
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    </script>
+    
     <footer>
         <p>&copy; 2025 Varun G. All rights reserved.</p>
     </footer>
