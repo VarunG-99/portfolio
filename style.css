@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-weight: 100;
 }
 
 /* Body and background styles */
@@ -24,10 +25,13 @@ h1, h2, h3 {
 
 /* Header Styles */
 header {
-    background: #1E1E1E;
+    /* background: #121212; */
+    background: rgba(18, 18, 18, 0.3);
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(10px);
     color: #f2f2f2;
     padding: 20px;
-    text-align: center;
+    text-align: left;
     position: fixed;
     width: 100%;
     top: 0;
@@ -36,16 +40,27 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-weight: lighter;
+    font-size: 2rem;
     margin-bottom: 10px;
     margin-top: -15px;
+    margin-left: 30px;
 }
 
+header h2 {
+    font-weight: lighter;
+    font-size: 1.2rem;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    margin-left: 70px;
+}
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: right;
+    margin-top: -60px;
+    margin-right: 20px;
 }
 
 nav ul li {
@@ -55,23 +70,22 @@ nav ul li {
 nav a {
     text-decoration: none;
     color: #E0E0E0;
-    font-weight: bold;
-    padding: 10px 15px;
-    background: #2A2A2A;
-    border-radius: 5px;
+    font-weight:lighter;
+    /* padding: 10px 15px;
+    background: #121212; */
+    border-radius: 0px;
     transition: background 0.3s ease;
 }
 
 nav a:hover {
-    background: #0A58CA;
-    color: #fff;
+    color: #0A58CA;
 }
 
 
 .contact-info {
     background: #2A2A2A;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     width: 60%;
     text-align: left;
@@ -124,7 +138,7 @@ a:hover {
 .profile-img-side {
     width: 225px;
     /* height: 250px; */
-    border-radius: 20px;
+    border-radius: 0px;
     object-fit: cover;
     border: 3px solid #0D6EFD;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
@@ -149,7 +163,7 @@ a:hover {
     margin-top: -10px;
     background: #2A2A2A;
     padding-left: 20px;
-    border-radius: 10px;
+    border-radius: 0px;
     width: 1050px;
     margin-left: auto;
     margin-right: auto;
@@ -215,7 +229,7 @@ section p {
     background: #1E1E1E;
     border: 2px solid #0D6EFD;
     padding: 30px; /* Increased padding */
-    border-radius: 20px;
+    border-radius: 0px;
     text-align: center;
     font-size: 1.5rem; /* Slightly bigger text */
     box-shadow: 0 6px 15px rgba(0,0,0,0.35); /* Deeper shadow */
@@ -237,9 +251,9 @@ section p {
     background: #2A2A2A;
     padding: 20px;
     margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    width: 60%;
+    border-radius: 0px;
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
+    width: 70%;
     color: #E0E0E0;
 }
 
@@ -258,22 +272,23 @@ section p {
 
 .project-item {
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
     gap: 20px;
-    background: #2A2A2A;
+    /* background: #2A2A2A; */
     padding: 20px;
     margin: 10px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 0px;
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
     width: 90%;
     color: #E0E0E0;
     flex-wrap: wrap;
 }
 
 .project-text {
-    flex: 1;
-    max-width: 70%;
+    flex:30%;
+    /* max-width: 90%; */
+    width: 1000px;
 }
 
 .project-text h3 {
@@ -284,8 +299,8 @@ section p {
 }
 
 .project-text p {
-    font-size: 1.1rem;
-    color: #A0A0A0;
+    font-size: 1.2rem;
+    color: #b5b5b5;
 }
 
 .project-images {
@@ -299,7 +314,7 @@ section p {
 
 .project-images img {
     Height: 200px;
-    border-radius: 10px;
+    border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -318,19 +333,19 @@ section p {
   }
   
   .resume-title {
-    margin: 0%;
+    margin-top: -20px;
   }
   
   .resume-download {
     background-color: #004e8f;
     color: white;
     padding: 0px 0px;
-    border-radius: 5px;
+    border-radius: 0px;
     text-decoration: none;
     transition: background 0.3s, color 0.3s;
     margin-left: auto;
     margin-right: 200px;
-    margin-top: -30px;
+    margin-top: -55px;
   }
   
   .resume-download-btn:hover {
@@ -342,7 +357,7 @@ section p {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
     gap: 40px; /* space between columns */
-    max-width: 1000px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 20px;
   }
@@ -352,8 +367,8 @@ section p {
 }
 
 .resume-column h3 {
-  color: #004e8f;
-  border-bottom: 2px solid #004e8f;
+  color: #0D6EFD;
+  border-bottom: 2px solid #0D6EFD;
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
@@ -388,7 +403,7 @@ section p {
     background-color: #0D6EFD;
     color: white;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 0px;
     text-decoration: none;
     transition: background 0.3s, color 0.3s;
   }
@@ -403,7 +418,7 @@ section p {
 form {
     background: #1E1E1E;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 0px;
     max-width: 600px;
     margin-bottom: 20px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
@@ -420,7 +435,7 @@ form {
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 6px;
+    border-radius: 0px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -435,7 +450,7 @@ input, textarea {
     padding: 10px;
     margin: 10px 0 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 0px;
     background: #2A2A2A;
     color: #E0E0E0;
 }
@@ -445,7 +460,7 @@ button[type="submit"] {
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 0px;
     cursor: pointer;
 }
 
@@ -476,7 +491,7 @@ button[type="submit"]:hover {
   .background-icon {
     position: fixed;
     opacity: 0;
-    animation: fadeIn 2s ease forwards, float 15s infinite ease-in-out;
+    animation: fadeIn 2s ease forwards, float 10s infinite ease-in-out;
     filter: brightness(0) invert(1); /* Add blur here if you want */
     z-index: -1;
   }
@@ -540,6 +555,6 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 0px;
     border-top: #0A58CA;
 }
