@@ -10,7 +10,7 @@
 /* Body and background styles */
 body {
     font-family: 'Poppins';
-    background: #121212;
+    background: #080808;
     color: #E0E0E0;
     line-height: 1.6;
 }
@@ -43,17 +43,111 @@ header h1 {
     font-weight: lighter;
     font-size: 2rem;
     margin-bottom: 10px;
-    margin-top: -15px;
+    margin-top: 0px;
     margin-left: 30px;
+    line-height: 1.0;
 }
+
+/* header h1:hover {
+    /* transform: scale(1.05) translateX(10px); */
+    /* color: #0D6EFD; */
+
 
 header h2 {
     font-weight: lighter;
     font-size: 1.2rem;
-    margin-top: -20px;
+    margin-top: -0px;
     margin-bottom: 10px;
     margin-left: 70px;
+    transition: all 0.7s ease;
+    transform-origin: left;
 }
+
+/* header h2:hover { */
+    /* transform: scale(1.05) translateX(10px);
+    color: #0D6EFD; */
+/* } */
+
+header h1 span, header h2 span {
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+header h1:hover span, header h2:hover span {
+    animation: letterPop 0.5s ease;
+}
+
+@keyframes letterPop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+        color: #0D6EFD;
+    }
+    100% {
+        transform: scale(1);
+        color: #E0E0E0;
+    }
+}
+
+/* Animation delays for h1 letters */
+header h1 span:nth-child(1) { animation-delay: 0.0s; }
+header h1 span:nth-child(2) { animation-delay: 0.05s; }
+header h1 span:nth-child(3) { animation-delay: 0.1s; }
+header h1 span:nth-child(4) { animation-delay: 0.15s; }
+header h1 span:nth-child(5) { animation-delay: 0.2s; }
+header h1 span:nth-child(6) { animation-delay: 0.25s; }
+header h1 span:nth-child(7) { animation-delay: 0.3s; }
+header h1 span:nth-child(8) { animation-delay: 0.35s; }
+header h1 span:nth-child(9) { animation-delay: 0.4s; }
+header h1 span:nth-child(10) { animation-delay: 0.45s; }
+header h1 span:nth-child(11) { animation-delay: 0.5s; }
+
+/* Animation delays for h2 letters (starting after h1 completes) */
+header h2 span:nth-child(1) { animation-delay: 0.6s; }
+header h2 span:nth-child(2) { animation-delay: 0.65s; }
+header h2 span:nth-child(3) { animation-delay: 0.7s; }
+header h2 span:nth-child(4) { animation-delay: 0.75s; }
+header h2 span:nth-child(5) { animation-delay: 0.8s; }
+header h2 span:nth-child(6) { animation-delay: 0.85s; }
+header h2 span:nth-child(7) { animation-delay: 0.9s; }
+header h2 span:nth-child(8) { animation-delay: 0.95s; }
+header h2 span:nth-child(9) { animation-delay: 1.0s; }
+header h2 span:nth-child(10) { animation-delay: 1.05s; }
+header h2 span:nth-child(11) { animation-delay: 1.1s; }
+header h2 span:nth-child(12) { animation-delay: 1.15s; }
+header h2 span:nth-child(13) { animation-delay: 1.2s; }
+
+header h1 .title-text {
+    font-size: 1.2rem;
+    margin-left: 45px;
+}
+
+header h1 .title-text span {
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+header h1:hover .title-text span {
+    animation: letterPop 0.5s ease;
+}
+
+/* Animation delays for title text letters */
+header h1 .title-text span:nth-child(1) { animation-delay: 0.0s; }
+header h1 .title-text span:nth-child(2) { animation-delay: 0.05s; }
+header h1 .title-text span:nth-child(3) { animation-delay: 0.1s; }
+header h1 .title-text span:nth-child(4) { animation-delay: 0.15s; }
+header h1 .title-text span:nth-child(5) { animation-delay: 0.2s; }
+header h1 .title-text span:nth-child(6) { animation-delay: 0.25s; }
+header h1 .title-text span:nth-child(7) { animation-delay: 0.3s; }
+header h1 .title-text span:nth-child(8) { animation-delay: 0.35s; }
+header h1 .title-text span:nth-child(9) { animation-delay: 0.4s; }
+header h1 .title-text span:nth-child(10) { animation-delay: 0.45s; }
+header h1 .title-text span:nth-child(11) { animation-delay: 0.5s; }
+header h1 .title-text span:nth-child(12) { animation-delay: 0.55s; }
+header h1 .title-text span:nth-child(13) { animation-delay: 0.6s; }
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -74,11 +168,14 @@ nav a {
     /* padding: 10px 15px;
     background: #121212; */
     border-radius: 0px;
-    transition: background 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 nav a:hover {
-    color: #0A58CA;
+    color: #E0E0E0;
+    transform: scale(1.05);
+    background: #0A58CA;
+    padding: 10px 15px;
 }
 
 
@@ -228,14 +325,14 @@ section p {
 .skill-card {
     background: #1E1E1E;
     border: 2px solid #0D6EFD;
-    padding: 30px; /* Increased padding */
+    padding: 30px;
     border-radius: 0px;
     text-align: center;
-    font-size: 1.5rem; /* Slightly bigger text */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.35); /* Deeper shadow */
+    font-size: 1.5rem;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.35);
     transition: transform 0.3s ease;
     color: #E0E0E0;
-    min-height: 160px; /* Optional height control */
+    min-height: 160px;
 }
 
 .skill-card small {
@@ -245,6 +342,10 @@ section p {
     color: #A0A0A0;
 }
 
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
 
 /* Project Styles */
 .project {
@@ -252,7 +353,6 @@ section p {
     padding: 20px;
     margin: 20px;
     border-radius: 0px;
-    /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
     width: 70%;
     color: #E0E0E0;
 }
@@ -275,11 +375,9 @@ section p {
     justify-content:center;
     align-items: center;
     gap: 20px;
-    /* background: #2A2A2A; */
     padding: 20px;
     margin: 10px auto;
     border-radius: 0px;
-    /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
     width: 90%;
     color: #E0E0E0;
     flex-wrap: wrap;
@@ -287,7 +385,6 @@ section p {
 
 .project-text {
     flex:30%;
-    /* max-width: 90%; */
     width: 1000px;
 }
 
@@ -309,7 +406,6 @@ section p {
     gap: 10px;
     flex-wrap: wrap;
     justify-content: flex-end;
-    /* min-width: 280px; */
 }
 
 .project-images img {
@@ -558,3 +654,32 @@ footer {
     border-radius: 0px;
     border-top: #0A58CA;
 }
+
+#scrollTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 80px;
+    right: 40px;
+    z-index: 100;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+#scrollTopBtn img {
+    width: 50px;
+    object-fit: contain;
+    filter: brightness(1);
+    background-color: #E0E0E0;
+    border-radius: 50%;
+    border: 3px solid #0D6EFD;
+}
+
+#scrollTopBtn:hover {
+    transform: scale(1.1);
+}
+  
