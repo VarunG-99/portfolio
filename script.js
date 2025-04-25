@@ -1,44 +1,66 @@
-document.addEventListener("DOMContentLoaded", function () {
-    function showSection(sectionId) {
-        document.querySelectorAll(".section").forEach(section => {
-            section.style.display = "none";
-        });
-
-        document.getElementById(sectionId).style.display = "flex";
+// Scroll to top button functionality
+window.onscroll = function() {
+    const btn = document.getElementById("scrollTopBtn");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
     }
 
-    // Ensure only the dashboard is visible on load
-    showSection("dashboard");
-
-    document.querySelectorAll("nav a").forEach(link => {
-        link.addEventListener("click", function (e) {
-            e.preventDefault();
-            const sectionId = this.getAttribute("onclick").match(/'([^']+)'/)[1];
-            showSection(sectionId);
-        });
-    });
-
-    // 🎯 Form submission redirect logic
-    const form = document.querySelector("form");
-    if (form) {
-        form.addEventListener("submit", async function (e) {
-            e.preventDefault();
-
-            const formData = new FormData(form);
-
-            const response = await fetch(form.action, {
-                method: "POST",
-                body: formData,
-                headers: {
-                    "Accept": "application/json"
+    // Update active navigation link
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+            const id = section.getAttribute('id');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${id}`) {
+                    link.classList.add('active');
                 }
             });
+        }
+    });
+};
 
-            if (response.ok) {
-                window.location.href = "thankyou.html";
-            } else {
-                alert("Oops! Something went wrong.");
-            }
+// Scroll to top function
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Project card expansion functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+        card.addEventListener('click', function() {
+            this.classList.toggle('expanded');
         });
-    }
+    });
 });
+
+// Scroll Animation
+function handleScrollAnimation() {
+    const elements = document.querySelectorAll('.about-container, .skills-grid, .projects-grid, .resume-container, form');
+    
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementBottom = element.getBoundingClientRect().bottom;
+        
+        // Check if element is in viewport
+        if (elementTop < window.innerHeight && elementBottom > 0) {
+            element.classList.add('visible');
+        }
+    });
+}
+
+// Initial check for elements in view
+document.addEventListener('DOMContentLoaded', () => {
+    handleScrollAnimation();
+});
+
+// Add scroll event listener
+window.addEventListener('scroll', handleScrollAnimation);
