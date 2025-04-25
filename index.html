@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio 2.0</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <script defer src="script.js"></script> -->
+    <script defer src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -41,17 +41,21 @@
         <div class="background-icon"><img src="world-wide-web.png" alt="Web Icon" /></div>
         <div class="background-icon"><img src="python.png" alt="Python Icon" /></div>
         <div class="background-icon"><img src="github-sign.png" alt="GitHub Icon" /></div>
-        <div class="background-icon"><img src="linkedin.png" alt="LinkedIn Icon" /></div> 
-        <div class="background-icon"><img src="mechanical-gears-.png" alt="Gear Icon" /></div>
-        <div class="background-icon"><img src="problem-solving.png" alt="Bulb Icon" /></div>
+        <div class="background-icon"><img src="linkedin.png" alt="LinkedIn Icon" /></div>
         <div class="background-icon"><img src="circuit.png" alt="Circuit Icon" /></div>
+        <div class="background-icon"><img src="python.png" alt="Python Icon" /></div>
+        <div class="background-icon"><img src="github-sign.png" alt="GitHub Icon" /></div>
+        <div class="background-icon"><img src="mechanical-gears-.png" alt="Gear Icon" /></div>
         <div class="background-icon"><img src="brainstorm.png" alt="Brain Icon" /></div>
+        <div class="background-icon"><img src="problem-solving.png" alt="Bulb Icon" /></div>
     </div>
 
     <section id="dashboard" class="section active">
-        
-        <h2>Varun Gowda</h2>
-        <p>Driven by curiosity, defined by design and precision.</p>
+        <h2>
+            <span>V</span><span>a</span><span>r</span><span>u</span><span>n</span> 
+            <span>G</span><span>o</span><span>w</span><span>d</span><span>a</span>
+        </h2>
+        <p>Driven by <span>curiosity</span>, defined by design and <span>precision</span>.</p>
     </section>
 
     <section id="about" class="section about-section">
@@ -77,52 +81,63 @@
     <section id="skills" class="section">
         <h2>Skills</h2>
         <div class="skills-grid">
-          <div class="skill-card">Programming<br><small>Python, C, Java</small></div>
-          <div class="skill-card">Tools<br><small>Arduino IDE, Power BI, KiCAD</small></div>
-          <div class="skill-card">CAD & Simulation<br><small>Fusion 360, Ansys</small></div>
-          <div class="skill-card">IDEs & DB<br><small>VS Code, PyCharm, MySQL</small></div>
-          <div class="skill-card">Operating Systems<br><small>Windows, Linux</small></div>
-          <div class="skill-card">Soft Skills<br><small>Teamwork, Time Management</small></div>
+          <div class="skill-card">Programming<br><small>Python | C | Java | HTML | CSS | JavaScript</small></div>
+          <div class="skill-card">Tools<br><small>Arduino IDE | Power BI | KiCAD | Solidworks | Fusion 360</small></div>
+          <div class="skill-card">CAD & Simulation<br><small>Fusion 360 | Ansys | Solidworks | MATLAB</small></div>
+          <div class="skill-card">IDEs & DB<br><small>VS Code | Cursor | Spyder | PyCharm | MySQL</small></div>
+          <div class="skill-card">Operating Systems<br><small>Windows | Linux | Android | iOS</small></div>
+          <div class="skill-card">Soft Skills<br><small>Teamwork | Time Management | Communication | Problem Solving | Adaptability</small></div>
         </div>
       </section>
       
       
 
     <section id="projects" class="section">
-        <div class="project-title"><h2>Projects</h2></div>
-      
-        <div class="project-item">
-          <div class="project-text">
-            <h3>Hoarding Elevator System</h3>
-            <p>Demonstration of a motorized elevator mechanism designed for billboard frames using a BO motor, pulleys, and a detachable cable system. This project reduces manual risk and improves maintenance efficiency for hoardings in urban settings.</p>
-          </div>
-          <div class="project-images">
-            <img src="Hoarding Elevator Working - frame at 0m0s.jpg" alt="Hoarding Elevator System" />
-            <video width="200" height="200" controls>
-              <source src="Hoarding Elevator Working Trimmed.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            
-          </div>
-        </div>
-      
-        <div class="project-item">
-          <div class="project-text">
-            <h3>Laser Security System</h3>
-            <p>Working prototype of a laser-based intrusion detection system featuring a custom-designed PCB. The system uses an LDR, potentiometer, and passive components to trigger alerts upon beam interruption.
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-card-header">
+                    <h3>Hoarding Elevator System</h3>
+                    <img src="chevron-double-up_10697604.png" alt="Expand" class="arrow">
+                </div>
+                <div class="project-card-content">
+                    <p>Demonstration of a motorized elevator mechanism designed for billboard frames using a BO motor, pulleys, and a detachable cable system. This project reduces manual risk and improves maintenance efficiency for hoardings in urban settings.</p>
+                    <div class="project-card-images">
+                        <img src="Hoarding Elevator Working - frame at 0m0s.jpg" alt="Hoarding Elevator System" />
+                        <video width="200" height="200" controls>
+                            <source src="Hoarding Elevator Working Trimmed.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank">View Project</a>
+                        <a href="#" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
 
-            </p>
-          </div>
-          <div class="project-images">
-            <img src="Laser Security System PCB - frame at 0m6s.jpg" alt="Laser Security System" />
-            <video width="200" height="200" controls>
-              <source src="Laser Security System Breadboard Testing Trimmed.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            
-          </div>
+            <div class="project-card">
+                <div class="project-card-header">
+                    <h3>Laser Security System</h3>
+                    <img src="chevron-double-up_10697604.png" alt="Expand" class="arrow">
+                </div>
+                <div class="project-card-content">
+                    <p>Working prototype of a laser-based intrusion detection system featuring a custom-designed PCB. The system uses an LDR, potentiometer, and passive components to trigger alerts upon beam interruption.</p>
+                    <div class="project-card-images">
+                        <img src="Laser Security System PCB - frame at 0m6s.jpg" alt="Laser Security System" />
+                        <video width="200" height="200" controls>
+                            <source src="Laser Security System Breadboard Testing Trimmed.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank">View Project</a>
+                        <a href="#" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
       
       <section id="resume" class="section">
         
@@ -204,23 +219,6 @@
         <img src="chevron-double-up_10697604.png" alt="Scroll to top" />
     </button>
 
-    <script>
-      // Show button when scrolling down
-      window.onscroll = function () {
-        const btn = document.getElementById("scrollTopBtn");
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-          btn.style.display = "block";
-        } else {
-          btn.style.display = "none";
-        }
-      };
-    
-      // Scroll to top on click
-      function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    </script>
-    
     <footer>
         <p>&copy; 2025 Varun G. All rights reserved.</p>
     </footer>
