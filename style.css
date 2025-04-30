@@ -718,12 +718,21 @@ section p {
 }
 
 /* Project Styles */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 .project-card {
     background: #2A2A2A;
-    padding: 20px;
-    margin: 20px auto;
+    padding: 15px;
+    margin: 0;
     border-radius: 0px;
-    width: 80%;
+    width: 100%;
     color: #E0E0E0;
     box-shadow: 0 6px 15px rgba(0,0,0,0.35);
     height: auto;
@@ -751,6 +760,9 @@ section p {
     width: 20px;
     height: 20px;
     transition: transform 0.3s ease;
+    background-color: white;
+    padding: 0px;
+    border-radius: 25%;
 }
 
 .project-card.expanded .arrow {
@@ -786,13 +798,15 @@ section p {
 
 .project-card-images img,
 .project-card-images video {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 7px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border: 3px solid #0D6EFD;
     object-fit: cover;
     transition: all 0.3s ease;
+    background-color: white;
+    padding: 0px;
 }
 
 .project-card-images img:hover,
@@ -823,20 +837,20 @@ section p {
 
 /* Responsive adjustments for project section */
 @media (max-width: 1024px) {
-    .project-card-images {
-        justify-content: center;
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .project-card {
-        width: 90%;
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
     
     .project-card-images img,
     .project-card-images video {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
     }
 }
 
@@ -890,7 +904,7 @@ section p {
 .resume-container.visible {
     opacity: 1;
     transform: translateY(0);
-}
+  }
 
 .resume-column {
   flex: 1 1 250px;
@@ -1179,7 +1193,7 @@ dashboard p {
     }
 }
 
-.floating-icons {
+  .floating-icons {
     position: fixed;
     top: 0;
     left: 0;
@@ -1188,23 +1202,23 @@ dashboard p {
     pointer-events: none;
     z-index: -1;
 }
-
-.background-icon {
+  
+  .background-icon {
     position: absolute;
     width: 60px;  /* Increased from 40px */
     height: 60px; /* Increased from 40px */
     opacity: 0.15;
     animation: fadeIn 1s ease-out forwards;
-}
-
-.background-icon img {
+  }
+  
+  .background-icon img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     filter: brightness(0) invert(1);
-}
-
-@keyframes fadeIn {
+  }
+  
+  @keyframes fadeIn {
     from {
         opacity: 0;
         transform: scale(0.8);
@@ -1307,7 +1321,3 @@ footer {
 #scrollTopBtn:hover {
     transform: scale(1.1);
 }
-  
- section active {
-
- } 
