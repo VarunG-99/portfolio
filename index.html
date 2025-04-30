@@ -6,6 +6,7 @@
     <title>My Portfolio 2.0</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <script src="navigation.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -41,7 +42,7 @@
         <div class="background-icon"><img src="world-wide-web.png" alt="Web Icon" /></div>
         <div class="background-icon"><img src="python.png" alt="Python Icon" /></div>
         <div class="background-icon"><img src="github-sign.png" alt="GitHub Icon" /></div>
-        <div class="background-icon"><img src="linkedin.png" alt="LinkedIn Icon" /></div>
+        <div class="background-icon"><img src="linkedin.png" alt="LinkedIn Icon" /></div> 
         <div class="background-icon"><img src="circuit.png" alt="Circuit Icon" /></div>
         <div class="background-icon"><img src="python.png" alt="Python Icon" /></div>
         <div class="background-icon"><img src="github-sign.png" alt="GitHub Icon" /></div>
@@ -97,17 +98,38 @@
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-card-header">
-                    <h3>Hoarding Elevator System</h3>
-                    <img src="chevron-double-up_10697604.png" alt="Expand" class="arrow">
+            <h3>Hoarding Elevator System</h3>
+                    <img src="down-arrow.png" alt="Expand" class="arrow">
                 </div>
                 <div class="project-card-content">
-                    <p>Demonstration of a motorized elevator mechanism designed for billboard frames using a BO motor, pulleys, and a detachable cable system. This project reduces manual risk and improves maintenance efficiency for hoardings in urban settings.</p>
+            <p>Demonstration of a motorized elevator mechanism designed for billboard frames using a BO motor, pulleys, and a detachable cable system. This project reduces manual risk and improves maintenance efficiency for hoardings in urban settings.</p>
                     <div class="project-card-images">
-                        <img src="Hoarding Elevator Working - frame at 0m0s.jpg" alt="Hoarding Elevator System" />
-                        <video width="200" height="200" controls>
-                            <source src="Hoarding Elevator Working Trimmed.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+            <img src="Hoarding Elevator Working - frame at 0m0s.jpg" alt="Hoarding Elevator System" />
+            <video width="200" height="200" controls>
+              <source src="Hoarding Elevator Working Trimmed.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank">View Project</a>
+                        <a href="#" target="_blank">GitHub</a>
+                    </div>
+          </div>
+        </div>
+      
+            <div class="project-card">
+                <div class="project-card-header">
+            <h3>Laser Security System</h3>
+                    <img src="down-arrow.png" alt="Expand" class="arrow">
+          </div>
+                <div class="project-card-content">
+                    <p>Working prototype of a laser-based intrusion detection system featuring a custom-designed PCB. The system uses an LDR, potentiometer, and passive components to trigger alerts upon beam interruption.</p>
+                    <div class="project-card-images">
+            <img src="Laser Security System PCB - frame at 0m6s.jpg" alt="Laser Security System" />
+            <video width="200" height="200" controls>
+              <source src="Laser Security System Breadboard Testing Trimmed.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
                     </div>
                     <div class="project-links">
                         <a href="#" target="_blank">View Project</a>
@@ -118,26 +140,25 @@
 
             <div class="project-card">
                 <div class="project-card-header">
-                    <h3>Laser Security System</h3>
-                    <img src="chevron-double-up_10697604.png" alt="Expand" class="arrow">
+                    <h3>SAR Imaging and Classification using Sentinel-1 Data</h3>
+                    <img src="down-arrow.png" alt="Expand" class="arrow">
                 </div>
                 <div class="project-card-content">
-                    <p>Working prototype of a laser-based intrusion detection system featuring a custom-designed PCB. The system uses an LDR, potentiometer, and passive components to trigger alerts upon beam interruption.</p>
-                    <div class="project-card-images">
-                        <img src="Laser Security System PCB - frame at 0m6s.jpg" alt="Laser Security System" />
-                        <video width="200" height="200" controls>
-                            <source src="Laser Security System Breadboard Testing Trimmed.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">View Project</a>
-                        <a href="#" target="_blank">GitHub</a>
-                    </div>
+                    <p><strong>Duration:</strong> March 2025 – April 2025</p>
+                    <p><strong>Tools:</strong> ESA SNAP Toolbox, Sentinel-1 Data, Python</p>
+                    <p>I worked on processing Synthetic Aperture Radar (SAR) imagery from the Sentinel-1 satellite to identify and classify land features using both unsupervised and semi-supervised classification methods. The goal was to explore automated terrain recognition and environmental monitoring using microwave remote sensing techniques.</p>
+                    <p><strong>Key highlights:</strong></p>
+                    <ul>
+                        <li>Preprocessed SAR GRD data (calibration, speckle filtering, terrain correction).</li>
+                        <li>Applied k-means clustering and ISODATA for unsupervised classification.</li>
+                        <li>Evaluated backscatter intensities to analyze urban vs. vegetative land cover.</li>
+                        <li>Gained hands-on experience with the ESA SNAP Toolbox, and interpreted band combinations and histograms for land-type differentiation.</li>
+                    </ul>
+                    <p>This project strengthened my understanding of radar imaging, signal processing, and real-world applications in geospatial analytics.</p>
                 </div>
-            </div>
+          </div>
         </div>
-    </section>
+      </section>
       
       <section id="resume" class="section">
         
@@ -218,7 +239,7 @@
     <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">
         <img src="chevron-double-up_10697604.png" alt="Scroll to top" />
     </button>
-
+    
     <footer>
         <p>&copy; 2025 Varun G. All rights reserved.</p>
     </footer>
